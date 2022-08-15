@@ -1,0 +1,14 @@
+int main(){
+	float perimetro,area,radio,p;
+	p=3.14;
+	cout <<"Introduzca el radio "<<endl;
+	cin >> radio;
+	perimetro=2*p*radio;
+	cout <<"El perimetro es: " <<endl;
+	cout << perimetro <<endl;
+	area= p*(radio*radio);
+	cout <<"El area es: " <<endl; 
+	cout << area <<endl;
+	getch();
+	return 0;
+} 
