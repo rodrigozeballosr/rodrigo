@@ -1,0 +1,52 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+   int a, b, r, opcion,area,lado,total,base,altura;
+   do {
+     cout << endl;
+     cout << "1.- Area de un Cuadrado" << endl;
+     cout << "2.- Area de un Triangulo" << endl;
+     cout << "3.- Presupuesto" << endl;
+	 cout << "4.- Camisas" << endl;
+     cout << "0.- Salir" << endl;
+     cout << "Elige una opción: " ;
+     cin >> opcion;
+     switch (opcion) {
+	  case 1: cout<<"Ingrese el lado:";
+		     cin>>lado;
+			 area=lado*lado;
+			 cout<<"El area es: "<<area;
+			 break;
+	  case 2: cout<<"Ingrese la base: ";
+		     cin>>base;
+			 cout<<"Ingrese la altura: ";
+			 cin>>altura;
+			 break;
+	  case 3: cout<<"Ingresar el presupuesto anual: "; 
+		     cin>>b;
+			 cout<<"Presupuesto ginecologia: "<<"\t"<<b*0.10;
+			 cout<<"Presupuesto oncologico: "<<"\t"<<b*0.50;
+			 cout<<"Presupuesto covid: "<<"\t"<<b*0.40;
+		     break;
+	  case 4: b=50;
+		  cout<<"Numero de camisas: ";
+		  cin>>r;
+		  if (r<2)
+			  cout<<"El precio a pagar "<<total;
+		  else 
+			  if (r>=3)
+				  cout<<"El precio a pagar seria a 20%"<<total-0.20*(total);
+			  else 
+				  cout<<"El precio a pagar seria a 15%"<<total-0.15*(total);
+		  break;
+		case 0: cout << "Salir";break;
+	    default: cout << "Opcion invalida" << endl;
+     }
+   } while (opcion != 0);
+   getch();
+}
