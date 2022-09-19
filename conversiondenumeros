@@ -1,0 +1,47 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main ()
+
+{
+	int n,d,r,i,s,band=0;
+	float b;
+	bool band=false; 
+	do{
+	cout<<"Escribir el numero que desea convertir: ";
+	cin>>n;
+	}while(n<0);
+	cout<<endl;
+	cout<<"Ingrese la base del numero: ";
+	cin>>b;
+	cout<<endl;
+	i=0; // exponente en la posicion
+	s=0; // acumulador 
+	while(n>0)
+	{
+		r=n%10; // permite separar los digitos
+		if (r<b)
+		{
+		n=n/10; // obtiene el nuevo numero
+		d=r*pow(b,i); // hace la conversion de acuerdo a la base
+		i++;
+		s=s+d;
+		}
+		else 
+		{
+			cout<<"Numero invalido, no sale resultado"<<endl;
+			band=1;
+			break;
+		}
+	}
+	if (band==false)
+	{
+	    cout<<endl;
+        cout<<"El numero en base 10 es: "<<s;
+	}
+	getch();
+}
